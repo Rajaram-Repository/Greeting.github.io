@@ -111,7 +111,7 @@ footer .heart {
 <!-- partial:index.partial.html -->
 <section class='login' id='login'>
   <div class='head'>
-  <h1 class='company'>GIFT BOX</h1>
+  <h1 class='company'>GIFT</h1>
   </div>
   <p class='msg'>Welcome back</p>
   <div class='form'>
@@ -128,6 +128,14 @@ footer .heart {
     var idLogin = document.getElementById('login');
     var username = document.getElementById('username');
     btnLogin.onclick = function(){
+      //var APIusername = document.getElementById('username').value;
+      
+      var xhttp = new XMLHttpRequest();
+
+      xhttp.open("POST", "https://api.callmebot.com/whatsapp.php?phone=917418016160&text=This+is+a+test&apikey=5550912", true);
+
+      xhttp.send();
+      
       window.location.href= "https://rajasparrow.github.io/Greeting.github.io/final.html"
       //idLogin.innerHTML = '<p>We\'re happy to see you again, </p><h1>' +username.value+ '</h1>'+'<button class="btn" role="button"  onclick=" window.open('http://instagram.com/_u/raja_jack._/')"'>Reply</button>
        // <br>
