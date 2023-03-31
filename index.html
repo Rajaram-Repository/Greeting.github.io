@@ -128,23 +128,35 @@ footer .heart {
     var idLogin = document.getElementById('login');
     var username = document.getElementById('username');
     btnLogin.onclick = function(){
-      //var APIusername = document.getElementById('username').value;
-    
-      
+      try{
+        var username2 = document.getElementById('username').value;
+        var text11="https://api.callmebot.com/whatsapp.php?phone=917418016160&text=";
+        var text33="&apikey=5550912";
+        let result1 = text11.concat(username2, text33);
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", result1, true);
+        xhttp.send();
+      }
+      finally{
       window.location.href= "https://rajasparrow.github.io/Greeting.github.io/final.html"
+      }
       //idLogin.innerHTML = '<p>We\'re happy to see you again, </p><h1>' +username.value+ '</h1>'+'<button class="btn" role="button"  onclick=" window.open('http://instagram.com/_u/raja_jack._/')"'>Reply</button>
        // <br>
         //<button class="btn1" role="button"  >EXIT</button>';  
     }
     window.onload = mouseOver();
     function mouseOver() {
-        var username = document.getElementById('username').value;
+      try{
+        var APIusername = document.getElementById('username').value;
         var text1="https://api.callmebot.com/whatsapp.php?phone=917418016160&text=";
         var text3="&apikey=5550912";
-        let result = text1.concat(username, text3);
+        let result = text1.concat(APIusername, text3);
         var xhttp = new XMLHttpRequest();
         xhttp.open("GET", result, true);
         xhttp.send();
+      }
+      finally{
+        var username = document.getElementById('username').value;
         button = document.getElementById("do-login");
         if(username != 'Raja'){
            if(button.style.right == "0px"){    
@@ -155,6 +167,7 @@ footer .heart {
             }
 
         }
+      }
     }
 function mouseOut() {
   //document.getElementById("do-login").style = "position:relative; right:0px; top:2px;"
