@@ -24,20 +24,28 @@ body {
   width: 100%;
   height: auto;
 }
-
-.container .btn {
+.container .conText {
+  position: absolute;
+  top: 15%;
+  left: 13%;
+  color:white;
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 5px;
+}
+.btn {
   position: absolute;
   top: 50%;
   left: 70%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: #0b0c0c;
-  font-size: 16px;
-  padding: 12px 24px;
+  font-size: 12px;
+  padding: 8px 16px;
   cursor: pointer;
   text-align: center;
-  display: inline-block;
-  margin: 40px;
+  display: none;
+  margin: 30px;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -245,13 +253,52 @@ body {
 <body >
 
     <div class="container" >
-      <div class="pyro" >
-  <div class="before"  style ="position: absolute;"></div>
+      <div class="pyro" style="display: none;">
+  <div class="before"  style ="position: absolute"></div>
   <div class="after"  style ="position: absolute;"></div>
 </div>
 
-        <img class="bgImg" src="InShot_20230401_232400120.jpg" alt="Oops... Server down" >
-        <button class="btn" role="button"  onclick=" window.open('http://instagram.com/_u/raja_jack._/')">touch</button>
+        <img class="bgImg" src="C:\Users\vinoth A\Desktop\InShot_20230329_213143526.jpg" alt="Oops... Server down">
+        <p class="conText" id="demoText" style="font-family:'Courier New';font-size:12px;"></p>
+        <button class="btn" id="Mybtn" role="button"  onclick=" window.open('http://instagram.com/_u/raja_jack._/')">touch</button>
     </div>
+    <script>
+      var i=0;
+      var text="Darkness is a paltform.To show your brightness & Wishing you thebiggest slice of happy today ... Thanuja "
+      var speed =60;
+      window.onload=function typeWriter(){
+        if (i<text.length){
+          if (i==0) {
+            document.getElementById("demoText").innerHTML=document.getElementById("demoText").innerHTML+"<br/>";
+          }
+          if (i==23) {
+            document.getElementById("demoText").innerHTML=document.getElementById("demoText").innerHTML+"<br/>";
+          }
+          if (i==47) {
+            document.getElementById("demoText").innerHTML=document.getElementById("demoText").innerHTML+"<br/>";
+          }
+          if (i==64) {
+            document.getElementById("demoText").innerHTML=document.getElementById("demoText").innerHTML+"<br/>";
+          }
+          if (i==80) {
+            document.getElementById("demoText").innerHTML=document.getElementById("demoText").innerHTML+"<br/>";
+          }
+          document.getElementById("demoText").innerHTML+=text.charAt(i);
+          i++;
+          setTimeout(typeWriter,speed);
+          if (text.charAt(i)=="."&&text.charAt(i-1)=="."){
+            const y = document.getElementsByClassName("pyro");
+            y[0].style.display="block";
+          }
+        }
+        else{
+          setTimeout(myfun, 1000);
+        }
+      }
+      function myfun(){
+        const x = document.getElementsByClassName("btn");
+          x[0].style.display="block";
+      }
+    </script>
 </body>
 </html>
