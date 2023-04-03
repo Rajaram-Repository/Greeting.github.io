@@ -29,9 +29,8 @@ body {
 }
 .container .conText {
   position: absolute;
-  top: 15%;
+  top: 13%;
   left: 13%;
-  color:white;
   text-indent: 50px;
   text-align: justify;
   letter-spacing: 5px;
@@ -282,23 +281,11 @@ body {
     </div>
     <script>
       var i=0;
-      var text="Darkness is a paltform.To show your brightness & Wishing you thebiggest slice of happy today ... Thanuja   "
+       var text="Darkness is a platform.To show your brightness & Wish you the most Wonderful of times today, Wishing you the happiest Birthday ever... Thanuja";
       var speed =70;
       window.onload=function typeWriter(){
         if (i<text.length){
-          if (i==0) {
-            document.getElementById("demoText").innerHTML=document.getElementById("demoText").innerHTML+"<br/>";
-          }
-          if (i==23) {
-            document.getElementById("demoText").innerHTML=document.getElementById("demoText").innerHTML+"<br/>";
-          }
-          if (i==47) {
-            document.getElementById("demoText").innerHTML=document.getElementById("demoText").innerHTML+"<br/>";
-          }
-          if (i==64) {
-            document.getElementById("demoText").innerHTML=document.getElementById("demoText").innerHTML+"<br/>";
-          }
-          if (i==80) {
+          if ((i==0)||(i==23)||(i==47) ||(i==67) ||(i==93)||(i==118) ) {
             document.getElementById("demoText").innerHTML=document.getElementById("demoText").innerHTML+"<br/>";
           }
           document.getElementById("demoText").innerHTML+=text.charAt(i);
