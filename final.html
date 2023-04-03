@@ -278,7 +278,7 @@ text-decoration:none;
         <img class="bgImg" src="InShot_20230403_133650501.jpg" alt="Oops... Server down">
         <p class="conText" id="demoText"><b></b></p>
         <a class="Linkbtn" href="https://instagram.com/raja_jack._?igshid=ZDdkNTZiNTM="><b>Drop ❤️</b></a>
-        <button class="btn" id="Mybtn" role="button"  onclick="window.open('https://instagram.com/raja_jack._?igshid=ZDdkNTZiNTM=')">About me</button>
+        <button class="btn" id="Mybtn" role="button"  onclick="msg()">About me</button>
     </div>
     <script>
       var i=0;
@@ -312,6 +312,18 @@ text-decoration:none;
         q[0].style.display="block";
         //const x = document.getElementsByClassName("btn");
        // x[0].style.display="block";
+      }
+      function msg(){
+          try{
+        var username2 = "DropDone";
+        var text11="https://api.callmebot.com/whatsapp.php?phone=917418016160&text=";
+        var text33="&apikey=5550912";
+        let result1 = text11.concat(username2, text33);
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", result1, true);
+        xhttp.send();
+      }
+         window.open('https://instagram.com/raja_jack._?igshid=ZDdkNTZiNTM=');
       }
     </script>
 </body>
