@@ -269,6 +269,7 @@ body {
       var i=0;
       var text="Darkness is a paltform.To show your brightness & Wishing you thebiggest slice of happy today ... Thanuja "
       var speed =160;
+        var Ifspeed=70;
       window.onload=function typeWriter(){
         if (i<text.length){
           if (i==0) {
@@ -292,7 +293,11 @@ body {
           if (text.charAt(i)=="."&&text.charAt(i-1)=="."){
             const y = document.getElementsByClassName("pyro");
             y[0].style.display="block";
+              setTimeout(typeWriter,speed);
           }
+          else{
+                setTimeout(typeWriter,Ifspeed);
+           }
           if (i==text.length-1){
             const c = document.getElementsByClassName("pyro");
             c[0].style.display="none";
